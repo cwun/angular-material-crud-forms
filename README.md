@@ -1,6 +1,16 @@
-# AngularMaterialCrudForms
+# Angular Material CRUD Forms
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+
+## Live Demos
+
+Hosted in Azure.
+
+- [Angular Material CRUD Forms](https://angular-material-crud-forms.azurewebsites.net/)
+
+## Tutorials
+
+Tutorial series about this project can be found [here](https://www.cc28tech.com/angular-material-crud-forms-part-1/). 
 
 ## Development server
 
