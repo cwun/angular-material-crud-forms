@@ -1,0 +1,16 @@
+<mat-toolbar class="header-toolbar mat-elevation-z6">
+    <button class="sidenav-toggle" aria-label="Toggle Sidebar" (click)="toggleSidenav()">
+        <mat-icon class="menu-icon" aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <div class="all-menu">
+        <a [routerLink]="''">
+            <img alt="angular" class="docs-angular-logo" src="../../../assets/img/angular-white-transparent.svg">
+            <span class="app-title">Material CRUD Forms</span>
+        </a>
+    </div>
+    <div class="desktop-menu">
+        <span class="spacer"></span>
+        <a *ngFor="let menu_item of menu; let i = index" [href]="[menu_item.url]" target="_blank" rel="noopener"
+            mat-button class="menu-item">{{ menu_item.name }}</a>
+    </div>
+</mat-toolbar>

@@ -1,0 +1,52 @@
+<div layout="row" layout-align="space-between center" flex class="layout-align-space-between-center layout-row flex">
+    <div class="top-container">
+        <span class="md-lgn-headline">{{ title }}</span>
+        <button class="btn-secondary" mat-mini-fab matTooltip="Home">
+            <mat-icon routerLink="/" aria-label="Home">home</mat-icon>
+        </button>
+    </div>
+</div>
+<div class="basic-container mat-elevation-z8">
+    <mat-horizontal-stepper [linear]="true" #stepper>
+
+        <!-- Personal Form for Step 1 -->
+        <mat-step [stepControl]="personalForm">
+            <ng-template matStepLabel>Personal</ng-template>
+            <app-personal-form [form]="personalForm"></app-personal-form>
+            <div>
+                <button mat-raised-button matStepperNext type="button" matTooltip="Next Step" class="btn-primary">Next</button>
+            </div>
+        </mat-step>
+
+        <!-- Work Form for Step 1 -->
+        <mat-step [stepControl]="workForm">
+            <ng-template matStepLabel>Work</ng-template>
+            <app-work-form [form]="workForm"></app-work-form>
+            <div class="top-15">
+                <button mat-raised-button matStepperPrevious>Previous</button>&nbsp;
+                <button class="btn-primary" mat-raised-button matStepperNext>Next</button>
+            </div>
+        </mat-step>
+
+        <!-- Address Form for Step 3 -->
+        <mat-step [stepControl]="addressForm">
+            <ng-template matStepLabel>Address</ng-template>
+            <app-address-form [form]="addressForm"></app-address-form>
+            <div>
+                <button mat-raised-button matStepperPrevious>Previous</button>&nbsp;
+                <button class="btn-primary" mat-raised-button matStepperNext>Next</button>
+            </div>
+        </mat-step>
+
+        <!-- Result Form for Step 4 -->
+        <mat-step>
+            <ng-template matStepLabel>Review</ng-template>
+            <app-result-form [formData]="getContact()"></app-result-form>
+            <div class="top-15">
+                <button mat-raised-button matStepperPrevious>Previous</button>&nbsp;
+                <button class="btn-success" mat-raised-button cdkFocusInitial (click)="save()">Save</button>
+            </div>
+        </mat-step>
+
+    </mat-horizontal-stepper>
+</div>

@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8a8a2970-b1d1-42a7-b91d-c6da572fda5c/resourceGroups/cc28tech-demo-group/providers/Microsoft.Web/sites/angular-material-crud-forms",
+    "appService.deploySubpath": "dist/angular-material-crud-forms"
+}

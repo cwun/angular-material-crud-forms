@@ -1,0 +1,22 @@
+<!-- Toolbar includes logo, titles, and actions -->
+<app-toolbar [title]="title" [menu]="menu" (toggleSidebar)="toggleSidenav()"></app-toolbar>
+<!-- End Toolbar -->
+
+<mat-sidenav-container fullscreen>
+
+    <!-- Collapsible side content -->
+    <mat-sidenav #sidenav [mode]="'over'" class="navbar">
+        <app-navbar [menu]="menu"></app-navbar>
+    </mat-sidenav>
+    <!-- End Collapsible side content -->
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <div class="mat-app-background">
+            <!-- Routed view  -->
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <!-- End Main Content Area -->
+    
+</mat-sidenav-container>

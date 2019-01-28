@@ -1,0 +1,80 @@
+// @import "./../../../styles/settings/breakpoints.scss";
+// @import "./../../../styles/settings/colors.scss";
+@import "breakpoints";
+@import "custom-colors";
+
+:host {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.app-title {
+    font-size: 13px;
+    //text-transform: uppercase;
+    @include breakpoint($narrow-devices) {
+        display: none;
+    }
+}
+
+.sidenav-toggle {
+    @include breakpoint($narrow-devices) {
+        display: none;
+    }
+}
+
+.all-menu {
+    .app-title {
+        display: inline-block;
+        color: $white;
+    }
+}
+
+.desktop-menu {
+    display: none;
+    
+    @include breakpoint($narrow-devices) {
+        display: flex;
+        width: 100%;
+    }
+}
+
+.github-logo {
+    img {
+        margin-right: 10px;
+    }
+}
+
+.sidenav-toggle {
+    cursor: pointer;
+    margin-right: 10px;
+    color: $white;
+    &:focus,
+    &:hover,
+    &:active {
+        outline: none;
+    }
+}
+
+.menu-item {
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.header-toolbar {
+    //background-color: $header-color;
+    background-color: $dark-color;
+    color: $white;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 12px -5px rgba(255,152,0,.46);
+}
+
+.docs-angular-logo {
+    height: 26px;
+    margin: 0 4px 3px 0;
+    vertical-align: middle;
+}

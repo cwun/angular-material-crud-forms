@@ -1,0 +1,40 @@
+<h3 mat-dialog-title>{{ title }}</h3>
+
+<mat-accordion class="example-headers-align">
+
+    <!-- Personal Form inside Expansion Panel Personal -->
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Personal
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-personal-form [form]="form"></app-personal-form>
+    </mat-expansion-panel>
+
+    <!-- Work Form inside Expansion Panel Work -->
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Work
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-work-form [form]="form"></app-work-form>
+    </mat-expansion-panel>
+
+    <!-- Address Form inside Expansion Panel Work -->
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Address
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-address-form [form]="form"></app-address-form>
+    </mat-expansion-panel>
+
+    <div class="top-15" align="end">
+        <button mat-raised-button (click)="close()">Close</button>&nbsp;
+        <button class="btn-success" mat-raised-button [disabled]="!form.valid || !form.dirty" (click)="save()">Save</button>
+    </div>
+
+</mat-accordion>

@@ -1,0 +1,7 @@
+<mat-list class="sidenav-menu">
+    <mat-list-item *ngFor="let menu_item of menu; let i = index">
+        <a class="sidenav-menu-item-static" mat-button [href]="[menu_item.url]" target="_blank" rel="noopener">
+            <span>{{ menu_item.name }}</span>
+        </a>
+    </mat-list-item>
+</mat-list>

@@ -1,0 +1,59 @@
+@import "custom-colors";
+@import "breakpoints";
+
+body {
+    margin: 0;
+    font-family: 'Roboto, Helvetica, Arial, sans-serif';
+    overflow: hidden;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 1.7rem;
+    margin-top: 2rem;
+}
+
+h2 {
+    font-weight: normal;
+    font-size: 1.4rem;
+}
+
+button {
+    background: transparent;
+    border: none;
+}
+
+mat-sidenav-container .mat-drawer-container {
+    background-color: $background-color;
+}
+
+button .mat-raised-button {
+    line-height: 45px;
+    padding: 0 25px;
+}
+
+.mat-form-field {
+    padding-top: 30px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: #55acee;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #ffd740;
+    color: #000000;
+}
+
+.btn-success {
+    background-color: #673ab7;
+    color: #fff;
+}
+
+.btn-info {
+    background-color: #b0bec5;
+    color: #000000;
+}

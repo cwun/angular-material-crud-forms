@@ -1,0 +1,23 @@
+.example-headers-align .mat-expansion-panel-header-title,
+.example-headers-align .mat-expansion-panel-header-description {
+  flex-basis: 0;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-15 {
+    padding-top: 15px;
+}
+
+.btn-success {
+    background-color: #673ab7;
+    color: #fff;
+}
+
+.btn-info {
+    background-color: #b0bec5;
+    color: #000000;
+}
