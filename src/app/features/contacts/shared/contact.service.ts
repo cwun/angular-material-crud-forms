@@ -29,7 +29,7 @@ export class ContactService {
     /** 
      * GET: get all contacts from the database 
      */
-    getContacts(): Observable<Contact[]> {
+    getContacts(): Observable<any> {
         this.logger.log(this.contactsUrl);
         return this.http
             .get<Contact[]>(this.contactsUrl)
@@ -42,7 +42,7 @@ export class ContactService {
     /** 
      * GET: get an existing contact from the database by an id 
      */ 
-    getContact(id: number): Observable<Contact> {
+    getContact(id: number): Observable<any> {
         const url = `${this.contactsUrl}/${id}`;
         return this.http
             .get<Contact>(url)
@@ -55,7 +55,7 @@ export class ContactService {
     /** 
      * POST: add a new contact to the database 
      */
-    addContact(contact: Contact): Observable<Contact> {
+    addContact(contact: Contact): Observable<any> {
         return this.http
             .post<Contact>(this.contactsUrl, contact, httpOptions)
             .pipe(
@@ -79,7 +79,7 @@ export class ContactService {
     /** 
      * DELETE: delete an existing hero from the database 
      */
-    deleteContact(contact: Contact | number): Observable<Contact> {
+    deleteContact(contact: Contact | number): Observable<any> {
         const id = typeof contact === 'number' ? contact : contact.id;
         const url = `${this.contactsUrl}/${id}`;
         return this.http
