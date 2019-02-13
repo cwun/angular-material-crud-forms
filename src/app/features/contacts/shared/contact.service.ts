@@ -106,7 +106,6 @@ export class ContactService {
                 eMsg ? ': ' + eMsg : ''
                 }`;
             this.notify(error, method);
-            this.updateState({ error, loading: false });
         }.bind(this);
     }
 
